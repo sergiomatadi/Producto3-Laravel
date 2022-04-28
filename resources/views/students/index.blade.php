@@ -33,10 +33,11 @@
             <td>{{ $students->nif }}</td>
             <td>{{ $students->date_registered }}</td>
             <td>
-            <a href="{{ url('/students/'.$students->id.'/edit') }}">
-            Editar
+            
+            <a href="{{ url('/students/'.$students->id.'/edit') }}"class="text-decoration-none"><input type="submit" style="text-decoration:none" value="Editar">
+     
             </a>    
-             | 
+       
 
             <form action="{{ url('/students/'.$students->id ) }}" method="post">
             @csrf
